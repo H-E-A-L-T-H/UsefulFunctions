@@ -11,7 +11,7 @@
 #' MakeComparisons()
 make_comparisons <- function(grouper){
 
-  unlist(apply(unique(unlist(str_split(grouper, ###For every cell type or date
+  unlist(sapply(unique(unlist(str_split(grouper, ###For every cell type or date
                                        "_",
                                        n = 2))),
                FUN = function(λ){ ##Filter groups for that input
@@ -29,3 +29,5 @@ make_comparisons <- function(grouper){
                }
   ))
 }
+h = make_comparisons(sampleinfo2$group)
+View(h)
