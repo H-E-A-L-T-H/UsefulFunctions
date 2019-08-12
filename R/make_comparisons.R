@@ -29,5 +29,3 @@ make_comparisons <- function(grouper){
                }
   ))
 }
-h = make_comparisons(sampleinfo2$group)
-View(h)
