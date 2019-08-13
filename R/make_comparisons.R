@@ -20,10 +20,13 @@ make_comparisons <- function(grouper){
                  sapply(filtered, ## For these filtered inputs
                         FUN = function(þ) { ##Make a comparison with all other options
                           sapply(filtered, FUN = function(ω){
+                            if(þ != ω){
                             paste(þ,
                                    ω,
                                    sep = " - "
                             )
+                            }
+
                           })
                         })
                }
